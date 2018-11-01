@@ -1,0 +1,10 @@
+<h2><a href="/">Home</a></h2>
+{% if topics %}
+<ul>
+	{% for topic in topics %}
+	<li><a href="/topics/{{topic.id}}/">{{topic.name}}</a></li>
+	{% endfor %}
+</ul>
+{% else %}
+<p>No topics exist</p>
+{% endif %}

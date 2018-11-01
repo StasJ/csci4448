@@ -1,0 +1,30 @@
+<style>
+.reply {
+	border: 1px solid black;
+	margin-bottom: 5px;
+}
+.reply .title {
+	float: left;
+}
+.reply .author {
+	float: right;
+}
+</style>
+{% if post %}
+<h2><a href="/">Home</a> > <a href="/topics/{{post.topic.id}}/">{{post.topic}}</a> > {{post}}</h2>
+<p>Author: {{post.user}}</p>
+<p>{{post.text}}</p>
+<ul>
+	{% for reply in replies %}
+	<!--<li><a href="/topics/{{topic.id}}/">{{post}}</a></li>-->
+	<div class="reply">
+		<div class="title">{{reply}}</div>
+		<div class="author">{{reply.user}}</div>
+		<br><hr>
+		<p>{{reply.text}}</p>
+	</div>
+	{% endfor %}
+</ul>
+{% else %}
+<p>Post not found</p>
+{% endif %}
