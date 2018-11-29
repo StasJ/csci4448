@@ -1,0 +1,32 @@
+<div class="section">
+	<div class="header">
+		{% if topic %}
+		<h6>New Thread</h6>
+		{% else %}
+		<h6>Reply</h6>
+		{% endif %}
+	</div>
+	<form action="{% url 'new_post' %}" method="POST">
+		{% csrf_token %}
+		<br>
+		{% if topic %}
+		<input type="hidden" name="topic" value="{{topic.id}}">
+		{% else %}
+		<input type="hidden" name="parent" value="{{parent.id}}">
+		{% endif %}
+
+		{% if topic %}
+		<div class="form-group">
+			<label for="title">Title</label>
+			<input required type="text" class="form-control" id="title" name="title" placeholder="Pick a Title">
+		</div>
+		{% endif %}
+		<div class="form-group">
+			{% if topic %}
+			<label for="text">Content</label>
+			{% endif %}
+			<textarea required class="form-control" id="text" name="text" rows="3"></textarea>
+		</div>
+		<button type="submit" class="btn btn-primary mt-3">Submit</button>
+	</form>
+</div>

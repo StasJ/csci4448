@@ -1,0 +1,28 @@
+{% extends 'forum/base.html' %}
+{% load humanize %}
+
+{% block content %}
+
+<nav>
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+		<li class="breadcrumb-item active">New Topic</li>
+	</ol>
+</nav>
+
+<div class="section">
+	<div class="header">
+		<h6>New Topic</h6>
+	</div>
+	<form action="{% url 'new_topic' %}" method="POST">
+		{% csrf_token %}
+		<br>
+		<div class="form-group">
+			<label for="name">Name</label>
+			<input required type="text" class="form-control" id="name" name="name" placeholder="Pick a Name">
+		</div>
+		<button type="submit" class="btn btn-primary mt-3">Submit</button>
+	</form>
+</div>
+
+{% endblock %}

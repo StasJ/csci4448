@@ -1,10 +1,41 @@
-<h2><a href="/">Home</a> > {{topic}}</h2>
-{% if posts %}
-<ul>
-	{% for post in posts %}
-	<li><a href="/posts/{{post.id}}/">{{post}}</a></li>
-	{% endfor %}
-</ul>
-{% else %}
-<p>No posts exist</p>
-{% endif %}
+{% extends 'forum/base.html' %}
+{% load humanize %}
+
+{% block content %}
+
+<nav>
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+		<li class="breadcrumb-item active">{{topic}}</li>
+	</ol>
+</nav>
+
+
+<div class="table-card">
+	<table>
+		<thead>
+			<tr>
+				<th>Thread</th>
+				<th>Replies</th>
+				<th>Votes</th>
+				<th>Time Posted</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for post in posts %}
+			<tr>
+				<td><a href="{% url 'post' post.id %}">{{ post.title |truncatechars_html:50 }}</a></td>
+				<td>{{post.post_set.count}}</td>
+				<td>{{post.vote_set.count}}</td>
+				<td>{{post.date|naturaltime}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+
+
+<button onclick="location.href='{% url 'new_thread' topic.id %}';" type="button" class="btn btn-primary">New Thread</button>
+
+
+{% endblock %}

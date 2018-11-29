@@ -1,0 +1,63 @@
+{% extends 'forum/base.html' %}
+{% load humanize %}
+
+{% block content %}
+
+<nav>
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+		<li class="breadcrumb-item">Users</li>
+		<li class="breadcrumb-item active">{{userPage}}</li>
+	</ol>
+</nav>
+
+
+<div class="section">
+	<div class="header">
+		<h6>@{{userPage}}</h6>
+	</div>
+	<div class="media pt-3">
+		<p class="media-body mb-0">
+		Name: {{userPage.getFullName}} <br>
+		Email: <a href="mailto:{{userPage.getEmail}}">{{userPage.getEmail}}</a> <br>
+		Joined: {{userPage.getDateJoined}} <br>
+		Last Login: {{userPage.getLastLogin}} <br>
+		<br>
+		Total Posts: {{userPage.getPostCount}}<br>
+		</p>
+	</div>
+</div>
+
+
+{{ userPage.getPersonalPage }}
+
+
+<div class="table-card">
+	<table>
+		<thead>
+			<tr>
+				<th>Thread</th>
+				<th>Replies</th>
+				<th>Votes</th>
+				<th>Time Posted</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for post in userPage.getPosts %}
+			<tr>
+				<td><a href="{% url 'post' post.id %}">{{ post |truncatechars_html:50 }}</a></td>
+				<td>{{post.post_set.count}}</td>
+				<td>{{post.vote_set.count}}</td>
+				<td>{{post.date|naturaltime}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+
+{% if user.id == userPage.getId %}
+<button onclick="location.href='{% url 'user_edit' %}';" type="button" class="btn btn-primary">Edit</button>
+{% endif %}
+
+
+{% endblock %}

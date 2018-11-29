@@ -1,0 +1,19 @@
+{% load humanize %}
+
+<div class="section" id="post-{{ post.id }}">
+	<div class="header">
+		<h6><a href="{% url 'user' post.user.id %}">@{{post.user}}</a></h6>
+		<small class="text-muted">{{post.date|naturaltime}}</small>
+	</div>
+	<div class="pt-3">
+		{{post.text|linebreaks}}
+	</div>
+	<small class="d-block text-right mt-3">
+		{{post.getNumberOfVotes}}
+		{% if user.is_authenticated %}
+		<a href="{% url 'vote' post.id %}">Vote</a>
+		{% else %}
+		Vote{{ post.getNumberOfVotes|pluralize }}
+		{% endif %}
+	</small>
+</div>

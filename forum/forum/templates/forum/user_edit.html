@@ -1,0 +1,30 @@
+{% extends 'forum/base.html' %}
+{% load humanize %}
+
+{% block content %}
+
+<nav>
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+		<li class="breadcrumb-item">Users</li>
+		<li class="breadcrumb-item"><a href="{% url 'user' user.id %}">{{user}}</a></li>
+		<li class="breadcrumb-item active">Edit Page</li>
+	</ol>
+</nav>
+
+<div class="section">
+	<div class="header">
+		<h6>Edit Page</h6>
+	</div>
+	<form method="POST">
+		{% csrf_token %}
+		<br>
+		<div class="form-group">
+			<label for="value">Page Content</label>
+			<textarea required class="form-control" id="value" name="value" rows="3">{{ value }}</textarea>
+		</div>
+		<button type="submit" class="btn btn-primary mt-3">Submit</button>
+	</form>
+</div>
+
+{% endblock %}

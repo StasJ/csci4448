@@ -1,0 +1,16 @@
+{% extends 'forum/base.html' %}
+{% load humanize %}
+
+{% block content %}
+
+<nav>
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+		<li class="breadcrumb-item"><a href="{% url 'topic' topic.id %}">{{topic}}</a></li>
+		<li class="breadcrumb-item active">New Thread</li>
+	</ol>
+</nav>
+
+{% include './new_post_form_section.html' %}
+
+{% endblock %}
