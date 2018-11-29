@@ -1,0 +1,110 @@
+\hypertarget{classforum_1_1models_1_1_post}{}\section{forum.\+models.\+Post Class Reference}
+\label{classforum_1_1models_1_1_post}\index{forum.\+models.\+Post@{forum.\+models.\+Post}}
+
+
+\mbox{\hyperlink{classforum_1_1models_1_1_post}{Post}} class represents a post.  
+
+
+Inheritance diagram for forum.\+models.\+Post\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classforum_1_1models_1_1_post}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classforum_1_1models_1_1_post_ae911a766cbe23e0c0041092224d09a63}\label{classforum_1_1models_1_1_post_ae911a766cbe23e0c0041092224d09a63}} 
+def {\bfseries \+\_\+\+\_\+str\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classforum_1_1models_1_1_post_ac66c70e3f291c4aa03bd7ff2fdbe7190}\label{classforum_1_1models_1_1_post_ac66c70e3f291c4aa03bd7ff2fdbe7190}} 
+def {\bfseries get\+Id} (self)
+\item 
+\mbox{\Hypertarget{classforum_1_1models_1_1_post_a6630f65f8c29ec2c1e756b977a697ccb}\label{classforum_1_1models_1_1_post_a6630f65f8c29ec2c1e756b977a697ccb}} 
+def {\bfseries get\+User} (self)
+\item 
+\mbox{\Hypertarget{classforum_1_1models_1_1_post_a7aec5985e0901f53a742e1c12b4718c5}\label{classforum_1_1models_1_1_post_a7aec5985e0901f53a742e1c12b4718c5}} 
+def {\bfseries set\+User} (self, user)
+\item 
+\mbox{\Hypertarget{classforum_1_1models_1_1_post_a0ad30b082aa369d360638760dd01b7ea}\label{classforum_1_1models_1_1_post_a0ad30b082aa369d360638760dd01b7ea}} 
+def {\bfseries get\+Topic} (self)
+\item 
+\mbox{\Hypertarget{classforum_1_1models_1_1_post_a436d5291230c3ac2c80b626acaac3def}\label{classforum_1_1models_1_1_post_a436d5291230c3ac2c80b626acaac3def}} 
+def {\bfseries set\+Topic} (self, topic)
+\item 
+\mbox{\Hypertarget{classforum_1_1models_1_1_post_a2129b87c5ef7c3b0bfe8cfd90e7eab40}\label{classforum_1_1models_1_1_post_a2129b87c5ef7c3b0bfe8cfd90e7eab40}} 
+def {\bfseries get\+Title} (self)
+\item 
+\mbox{\Hypertarget{classforum_1_1models_1_1_post_a0fe4659d6628e98176dee2d0f5507d09}\label{classforum_1_1models_1_1_post_a0fe4659d6628e98176dee2d0f5507d09}} 
+def {\bfseries set\+Title} (self, title)
+\item 
+\mbox{\Hypertarget{classforum_1_1models_1_1_post_a848539ab65ee76026fa841639f8e3e17}\label{classforum_1_1models_1_1_post_a848539ab65ee76026fa841639f8e3e17}} 
+def {\bfseries get\+Text} (self)
+\item 
+\mbox{\Hypertarget{classforum_1_1models_1_1_post_a6ed944073a41cc1961f7ed815cc60c24}\label{classforum_1_1models_1_1_post_a6ed944073a41cc1961f7ed815cc60c24}} 
+def {\bfseries set\+Text} (self, text)
+\item 
+\mbox{\Hypertarget{classforum_1_1models_1_1_post_afa4996b65c33466db7a26de2dc74b654}\label{classforum_1_1models_1_1_post_afa4996b65c33466db7a26de2dc74b654}} 
+def {\bfseries get\+Votes} (self)
+\item 
+\mbox{\Hypertarget{classforum_1_1models_1_1_post_a456d57650a6f3471b4d49137c0cb108e}\label{classforum_1_1models_1_1_post_a456d57650a6f3471b4d49137c0cb108e}} 
+def {\bfseries get\+Number\+Of\+Votes} (self)
+\item 
+def \mbox{\hyperlink{classforum_1_1models_1_1_post_ad4ec8bc0d7695b437af426923c4d18fa}{toggle\+Vote}} (self, user)
+\begin{DoxyCompactList}\small\item\em This function toggles a user\textquotesingle{}s vote. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classforum_1_1models_1_1_post_a5136d689515d6a6a54eb13b36b9b3f59}\label{classforum_1_1models_1_1_post_a5136d689515d6a6a54eb13b36b9b3f59}} 
+{\bfseries user} = models.\+Foreign\+Key(User, on\+\_\+delete=models.\+C\+A\+S\+C\+A\+DE)
+\item 
+\mbox{\Hypertarget{classforum_1_1models_1_1_post_abca8651b34e73869314e8d4675c6d1a3}\label{classforum_1_1models_1_1_post_abca8651b34e73869314e8d4675c6d1a3}} 
+{\bfseries topic} = models.\+Foreign\+Key(\mbox{\hyperlink{classforum_1_1models_1_1_topic}{Topic}}, on\+\_\+delete=models.\+C\+A\+S\+C\+A\+DE, blank=True, null=True)
+\item 
+\mbox{\Hypertarget{classforum_1_1models_1_1_post_a0012414ecd8600c939fa96f39545e4d7}\label{classforum_1_1models_1_1_post_a0012414ecd8600c939fa96f39545e4d7}} 
+{\bfseries parent} = models.\+Foreign\+Key(\textquotesingle{}self\textquotesingle{}, on\+\_\+delete=models.\+C\+A\+S\+C\+A\+DE, blank=True, null=True)
+\item 
+\mbox{\Hypertarget{classforum_1_1models_1_1_post_a62748560a49f6be1a462bc5a5b85ccdf}\label{classforum_1_1models_1_1_post_a62748560a49f6be1a462bc5a5b85ccdf}} 
+{\bfseries title} = models.\+Char\+Field(max\+\_\+length=256, blank=True)
+\item 
+\mbox{\Hypertarget{classforum_1_1models_1_1_post_af24d69d120754653de95f4b02481a97c}\label{classforum_1_1models_1_1_post_af24d69d120754653de95f4b02481a97c}} 
+{\bfseries text} = models.\+Text\+Field()
+\item 
+\mbox{\Hypertarget{classforum_1_1models_1_1_post_a5fc04f7e66116c02ff43a7bd1f62f306}\label{classforum_1_1models_1_1_post_a5fc04f7e66116c02ff43a7bd1f62f306}} 
+{\bfseries date} = models.\+Date\+Time\+Field(auto\+\_\+now\+\_\+add=True)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classforum_1_1models_1_1_post}{Post}} class represents a post. 
+
+It keeps track of a post as well as providing utility functions 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classforum_1_1models_1_1_post_ad4ec8bc0d7695b437af426923c4d18fa}\label{classforum_1_1models_1_1_post_ad4ec8bc0d7695b437af426923c4d18fa}} 
+\index{forum\+::models\+::\+Post@{forum\+::models\+::\+Post}!toggle\+Vote@{toggle\+Vote}}
+\index{toggle\+Vote@{toggle\+Vote}!forum\+::models\+::\+Post@{forum\+::models\+::\+Post}}
+\subsubsection{\texorpdfstring{toggle\+Vote()}{toggleVote()}}
+{\footnotesize\ttfamily def forum.\+models.\+Post.\+toggle\+Vote (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{user }\end{DoxyParamCaption})}
+
+
+
+This function toggles a user\textquotesingle{}s vote. 
+
+If a user has not yet voted on a post this will create a new vote for them. If they have, this will remove their vote
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em user} & that is voting\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classforum_1_1models_1_1_vote}{Vote}} on create vote 
+
+None on delete vote 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+models.\+py\end{DoxyCompactItemize}

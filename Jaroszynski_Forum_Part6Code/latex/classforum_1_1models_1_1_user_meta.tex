@@ -1,0 +1,114 @@
+\hypertarget{classforum_1_1models_1_1_user_meta}{}\section{forum.\+models.\+User\+Meta Class Reference}
+\label{classforum_1_1models_1_1_user_meta}\index{forum.\+models.\+User\+Meta@{forum.\+models.\+User\+Meta}}
+
+
+Holds additional user data.  
+
+
+Inheritance diagram for forum.\+models.\+User\+Meta\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classforum_1_1models_1_1_user_meta}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classforum_1_1models_1_1_user_meta_ae7257459c1679cb2201a3090b2fe7118}\label{classforum_1_1models_1_1_user_meta_ae7257459c1679cb2201a3090b2fe7118}} 
+def {\bfseries \+\_\+\+\_\+str\+\_\+\+\_\+} (self)
+\item 
+def \mbox{\hyperlink{classforum_1_1models_1_1_user_meta_ac395c1b7f03bf5060dcb3681c0b7e698}{get\+User}} (self)
+\item 
+def \mbox{\hyperlink{classforum_1_1models_1_1_user_meta_af76d5d062dbb663171bfd16ffbe5448f}{set\+User}} (self, user)
+\item 
+def \mbox{\hyperlink{classforum_1_1models_1_1_user_meta_af5ee69e5ad0d80a8b4bb1df7dd44c212}{get\+Key}} (self)
+\item 
+def \mbox{\hyperlink{classforum_1_1models_1_1_user_meta_a8ef75719439f8dc2ef994a5070a3d913}{set\+Key}} (self, key)
+\item 
+def \mbox{\hyperlink{classforum_1_1models_1_1_user_meta_a7ecc4d5bfadd1c1889a00097d295178d}{get\+Value}} (self)
+\item 
+def \mbox{\hyperlink{classforum_1_1models_1_1_user_meta_ac953dbb8410b74c20dfc3b217b5f9373}{set\+Value}} (self, value)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classforum_1_1models_1_1_user_meta_a07b7bea47d3ede5a8c8f3c3ae00fc14b}\label{classforum_1_1models_1_1_user_meta_a07b7bea47d3ede5a8c8f3c3ae00fc14b}} 
+{\bfseries user} = models.\+Foreign\+Key(User, on\+\_\+delete=models.\+C\+A\+S\+C\+A\+DE)
+\item 
+\mbox{\Hypertarget{classforum_1_1models_1_1_user_meta_a5f052f2a6a6bd5fae22c86d45a945f0c}\label{classforum_1_1models_1_1_user_meta_a5f052f2a6a6bd5fae22c86d45a945f0c}} 
+{\bfseries key} = models.\+Char\+Field(max\+\_\+length=256)
+\item 
+\mbox{\Hypertarget{classforum_1_1models_1_1_user_meta_a7ea2e429fe2dcfb0a5559f14f6991929}\label{classforum_1_1models_1_1_user_meta_a7ea2e429fe2dcfb0a5559f14f6991929}} 
+{\bfseries value} = models.\+Text\+Field(blank=True)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Holds additional user data. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classforum_1_1models_1_1_user_meta_af5ee69e5ad0d80a8b4bb1df7dd44c212}\label{classforum_1_1models_1_1_user_meta_af5ee69e5ad0d80a8b4bb1df7dd44c212}} 
+\index{forum\+::models\+::\+User\+Meta@{forum\+::models\+::\+User\+Meta}!get\+Key@{get\+Key}}
+\index{get\+Key@{get\+Key}!forum\+::models\+::\+User\+Meta@{forum\+::models\+::\+User\+Meta}}
+\subsubsection{\texorpdfstring{get\+Key()}{getKey()}}
+{\footnotesize\ttfamily def forum.\+models.\+User\+Meta.\+get\+Key (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+string key 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classforum_1_1models_1_1_user_meta_ac395c1b7f03bf5060dcb3681c0b7e698}\label{classforum_1_1models_1_1_user_meta_ac395c1b7f03bf5060dcb3681c0b7e698}} 
+\index{forum\+::models\+::\+User\+Meta@{forum\+::models\+::\+User\+Meta}!get\+User@{get\+User}}
+\index{get\+User@{get\+User}!forum\+::models\+::\+User\+Meta@{forum\+::models\+::\+User\+Meta}}
+\subsubsection{\texorpdfstring{get\+User()}{getUser()}}
+{\footnotesize\ttfamily def forum.\+models.\+User\+Meta.\+get\+User (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+User associated with metadata 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classforum_1_1models_1_1_user_meta_a7ecc4d5bfadd1c1889a00097d295178d}\label{classforum_1_1models_1_1_user_meta_a7ecc4d5bfadd1c1889a00097d295178d}} 
+\index{forum\+::models\+::\+User\+Meta@{forum\+::models\+::\+User\+Meta}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!forum\+::models\+::\+User\+Meta@{forum\+::models\+::\+User\+Meta}}
+\subsubsection{\texorpdfstring{get\+Value()}{getValue()}}
+{\footnotesize\ttfamily def forum.\+models.\+User\+Meta.\+get\+Value (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+string value for key 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classforum_1_1models_1_1_user_meta_a8ef75719439f8dc2ef994a5070a3d913}\label{classforum_1_1models_1_1_user_meta_a8ef75719439f8dc2ef994a5070a3d913}} 
+\index{forum\+::models\+::\+User\+Meta@{forum\+::models\+::\+User\+Meta}!set\+Key@{set\+Key}}
+\index{set\+Key@{set\+Key}!forum\+::models\+::\+User\+Meta@{forum\+::models\+::\+User\+Meta}}
+\subsubsection{\texorpdfstring{set\+Key()}{setKey()}}
+{\footnotesize\ttfamily def forum.\+models.\+User\+Meta.\+set\+Key (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{key }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em key} & Set key \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classforum_1_1models_1_1_user_meta_af76d5d062dbb663171bfd16ffbe5448f}\label{classforum_1_1models_1_1_user_meta_af76d5d062dbb663171bfd16ffbe5448f}} 
+\index{forum\+::models\+::\+User\+Meta@{forum\+::models\+::\+User\+Meta}!set\+User@{set\+User}}
+\index{set\+User@{set\+User}!forum\+::models\+::\+User\+Meta@{forum\+::models\+::\+User\+Meta}}
+\subsubsection{\texorpdfstring{set\+User()}{setUser()}}
+{\footnotesize\ttfamily def forum.\+models.\+User\+Meta.\+set\+User (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{user }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em user} & Set user \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classforum_1_1models_1_1_user_meta_ac953dbb8410b74c20dfc3b217b5f9373}\label{classforum_1_1models_1_1_user_meta_ac953dbb8410b74c20dfc3b217b5f9373}} 
+\index{forum\+::models\+::\+User\+Meta@{forum\+::models\+::\+User\+Meta}!set\+Value@{set\+Value}}
+\index{set\+Value@{set\+Value}!forum\+::models\+::\+User\+Meta@{forum\+::models\+::\+User\+Meta}}
+\subsubsection{\texorpdfstring{set\+Value()}{setValue()}}
+{\footnotesize\ttfamily def forum.\+models.\+User\+Meta.\+set\+Value (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em value} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+models.\+py\end{DoxyCompactItemize}

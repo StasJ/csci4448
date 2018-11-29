@@ -1,0 +1,56 @@
+\hypertarget{namespaceforum_1_1urls}{}\section{forum.\+urls Namespace Reference}
+\label{namespaceforum_1_1urls}\index{forum.\+urls@{forum.\+urls}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list {\bfseries urlpatterns}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}forum URL Configuration
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/1.11/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  url(r'^$', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  url(r'^$', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.conf.urls import url, include
+    2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
+\end{DoxyVerb}
+ 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceforum_1_1urls_a7e2cef478265bfef090b94cc0b367e1b}\label{namespaceforum_1_1urls_a7e2cef478265bfef090b94cc0b367e1b}} 
+\index{forum\+::urls@{forum\+::urls}!urlpatterns@{urlpatterns}}
+\index{urlpatterns@{urlpatterns}!forum\+::urls@{forum\+::urls}}
+\subsubsection{\texorpdfstring{urlpatterns}{urlpatterns}}
+{\footnotesize\ttfamily list forum.\+urls.\+urlpatterns}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 =  [
+2     url(\textcolor{stringliteral}{r'^admin/'}, admin.site.urls),
+3     url(\textcolor{stringliteral}{r'^topics/$'}, views.topics, name=\textcolor{stringliteral}{'home'}),
+4     url(\textcolor{stringliteral}{r'^topics/new$'}, views.new\_topic, name=\textcolor{stringliteral}{'new\_topic'}),
+5     url(\textcolor{stringliteral}{r'^topic/(?P<topic\_id>[0-9]+)/$'}, views.topic, name=\textcolor{stringliteral}{'topic'}),
+6     url(\textcolor{stringliteral}{r'^topic/(?P<topic\_id>[0-9]+)/new/'}, views.new\_thread, name=\textcolor{stringliteral}{'new\_thread'}),
+7     url(\textcolor{stringliteral}{r'^posts/(?P<post\_id>[0-9]+)/$'}, views.post, name=\textcolor{stringliteral}{'post'}),
+8     url(\textcolor{stringliteral}{r'^posts/new/$'}, views.create\_post, name=\textcolor{stringliteral}{'new\_post'}),
+9     url(\textcolor{stringliteral}{r'^user/(?P<user\_id>[0-9]+)/'}, views.user, name=\textcolor{stringliteral}{'user'}),
+10     url(\textcolor{stringliteral}{r'^user/edit/'}, views.user\_edit, name=\textcolor{stringliteral}{'user\_edit'}),
+11     url(\textcolor{stringliteral}{r'^vote/(?P<post\_id>[0-9]+)/'}, views.vote, name=\textcolor{stringliteral}{'vote'}),
+12     url(\textcolor{stringliteral}{r'^$'}, RedirectView.as\_view(url=\textcolor{stringliteral}{'topics/'}, permanent=\textcolor{keyword}{False})),
+13 
+14 
+15     url(\textcolor{stringliteral}{r'^accounts/'}, include(\textcolor{stringliteral}{'django.contrib.auth.urls'})),
+16     url(\textcolor{stringliteral}{r'^signup/$'}, views.signup, name=\textcolor{stringliteral}{'signup'}),
+17     \textcolor{comment}{# url(r'^login/', auth\_views.LoginView.as\_view(), name='login'),}
+18     \textcolor{comment}{# url('^change-password/$', auth\_views.PasswordChangeView.as\_view(), name='password\_reset'),}
+19 ]
+\end{DoxyCode}

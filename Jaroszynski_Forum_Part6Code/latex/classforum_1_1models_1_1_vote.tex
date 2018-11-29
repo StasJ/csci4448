@@ -1,0 +1,94 @@
+\hypertarget{classforum_1_1models_1_1_vote}{}\section{forum.\+models.\+Vote Class Reference}
+\label{classforum_1_1models_1_1_vote}\index{forum.\+models.\+Vote@{forum.\+models.\+Vote}}
+
+
+\mbox{\hyperlink{classforum_1_1models_1_1_vote}{Vote}} class represents a vote.  
+
+
+Inheritance diagram for forum.\+models.\+Vote\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classforum_1_1models_1_1_vote}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classforum_1_1models_1_1_vote_1_1_meta}{Meta}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classforum_1_1models_1_1_vote_af8c92939175fd095b65d375a85bf1470}\label{classforum_1_1models_1_1_vote_af8c92939175fd095b65d375a85bf1470}} 
+def {\bfseries \+\_\+\+\_\+str\+\_\+\+\_\+} (self)
+\item 
+def \mbox{\hyperlink{classforum_1_1models_1_1_vote_a92b43d21e35bfd4a1e485f4581d99c4f}{get\+User}} (self)
+\item 
+def \mbox{\hyperlink{classforum_1_1models_1_1_vote_a4412be7454022b6c02fb4c7056f2e7f9}{set\+User}} (self, user)
+\item 
+def \mbox{\hyperlink{classforum_1_1models_1_1_vote_af21f576041494dbf3fab8c9e1cc32ecc}{get\+Post}} (self)
+\item 
+def \mbox{\hyperlink{classforum_1_1models_1_1_vote_a505b7803c6886f32fd0d1afc23f78b43}{set\+Post}} (self, post)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classforum_1_1models_1_1_vote_a23b436f8ec030e15e264e6129f62c0c7}\label{classforum_1_1models_1_1_vote_a23b436f8ec030e15e264e6129f62c0c7}} 
+{\bfseries user} = models.\+Foreign\+Key(User, on\+\_\+delete=models.\+C\+A\+S\+C\+A\+DE)
+\item 
+\mbox{\Hypertarget{classforum_1_1models_1_1_vote_a14897f2e32ed288366be2e57c9566a39}\label{classforum_1_1models_1_1_vote_a14897f2e32ed288366be2e57c9566a39}} 
+{\bfseries post} = models.\+Foreign\+Key(\mbox{\hyperlink{classforum_1_1models_1_1_post}{Post}}, on\+\_\+delete=models.\+C\+A\+S\+C\+A\+DE)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classforum_1_1models_1_1_vote}{Vote}} class represents a vote. 
+
+It keeps track of a unique user and post pair 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classforum_1_1models_1_1_vote_af21f576041494dbf3fab8c9e1cc32ecc}\label{classforum_1_1models_1_1_vote_af21f576041494dbf3fab8c9e1cc32ecc}} 
+\index{forum\+::models\+::\+Vote@{forum\+::models\+::\+Vote}!get\+Post@{get\+Post}}
+\index{get\+Post@{get\+Post}!forum\+::models\+::\+Vote@{forum\+::models\+::\+Vote}}
+\subsubsection{\texorpdfstring{get\+Post()}{getPost()}}
+{\footnotesize\ttfamily def forum.\+models.\+Vote.\+get\+Post (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classforum_1_1models_1_1_post}{Post}} to vote on 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classforum_1_1models_1_1_vote_a92b43d21e35bfd4a1e485f4581d99c4f}\label{classforum_1_1models_1_1_vote_a92b43d21e35bfd4a1e485f4581d99c4f}} 
+\index{forum\+::models\+::\+Vote@{forum\+::models\+::\+Vote}!get\+User@{get\+User}}
+\index{get\+User@{get\+User}!forum\+::models\+::\+Vote@{forum\+::models\+::\+Vote}}
+\subsubsection{\texorpdfstring{get\+User()}{getUser()}}
+{\footnotesize\ttfamily def forum.\+models.\+Vote.\+get\+User (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+User that voted 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classforum_1_1models_1_1_vote_a505b7803c6886f32fd0d1afc23f78b43}\label{classforum_1_1models_1_1_vote_a505b7803c6886f32fd0d1afc23f78b43}} 
+\index{forum\+::models\+::\+Vote@{forum\+::models\+::\+Vote}!set\+Post@{set\+Post}}
+\index{set\+Post@{set\+Post}!forum\+::models\+::\+Vote@{forum\+::models\+::\+Vote}}
+\subsubsection{\texorpdfstring{set\+Post()}{setPost()}}
+{\footnotesize\ttfamily def forum.\+models.\+Vote.\+set\+Post (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{post }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em post} & \mbox{\hyperlink{classforum_1_1models_1_1_post}{Post}} to vote on \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classforum_1_1models_1_1_vote_a4412be7454022b6c02fb4c7056f2e7f9}\label{classforum_1_1models_1_1_vote_a4412be7454022b6c02fb4c7056f2e7f9}} 
+\index{forum\+::models\+::\+Vote@{forum\+::models\+::\+Vote}!set\+User@{set\+User}}
+\index{set\+User@{set\+User}!forum\+::models\+::\+Vote@{forum\+::models\+::\+Vote}}
+\subsubsection{\texorpdfstring{set\+User()}{setUser()}}
+{\footnotesize\ttfamily def forum.\+models.\+Vote.\+set\+User (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{user }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em user} & User that voted \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+models.\+py\end{DoxyCompactItemize}
